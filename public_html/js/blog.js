@@ -1,7 +1,13 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+$(function () {
+    var APPLICATION_ID = "346E4E89-4637-7BF6-FFE5-E55522AADD00",
+        SECRET_KEY = "D4676A5F-121A-C551-FFA2-BB04D3BD8D00",
+        VERSION = "v1";
+        
+    Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
+    
+    var user = new Backendless.user();
+    user.email = "reapz16@gmail.com";
+    user.password = "jacobz25";
+    Backendless.userService.register(user);
+    
+});
