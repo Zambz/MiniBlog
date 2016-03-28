@@ -6,7 +6,7 @@ $(function () {
     Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
     
     var dataStore = Backendless.Persistance.of(Posts);
-    var post = new Posts({title: "My first Blog Post", content:"My first blog post content", email:"reapz16@gmail.com"});
+    var post = new Posts({title: "My first Blog Post", content:"My first blog post content", authorEmail:"reapz16@gmail.com"});
     dataStore.save(post);
     
 });
