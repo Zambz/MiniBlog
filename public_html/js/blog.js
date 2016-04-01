@@ -21,7 +21,7 @@ $(function () {
     var blogTemplate = Handlebars.compile(blogScript);
     var blogHTML = blogTemplate(wrapper);
     
-    $('.main-container').html(blogHTML)
+    $('.main-container').html(blogHTML);
     
 });
 
