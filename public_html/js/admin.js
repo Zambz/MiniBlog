@@ -28,3 +28,11 @@ function Posts(args) {
     this.authorEmail = args.authorEmail || "";
 }
 
+function userLoggedIn() {
+    console.log("user succsessfully logged in");
+}
+
+function gotError(error) {
+    console.log("Error message - " + error.message);
+    console.log("Error code - " + error.code);
+}
