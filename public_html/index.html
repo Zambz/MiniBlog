@@ -13,14 +13,16 @@
     </head>
 
     <body>
+        <ul id="slide-out" class="side-nav fixed">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="admin.html">Admin</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        
         <header>
-            <nav>
+            <nav class="green accent-4">
                 <div class="nav-wrapper"> 
                     <a href="#" class="brand-logo">Blog</a>
-                    <ul class="right">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="admin.html">Admin</a></li>
-                    </ul>
                 </div>
             </nav>
         </header>
@@ -36,11 +38,11 @@
                 </div>
             </div>
         </main>
-        <footer class="page-footer">
-            <div class="container">
+        <footer class="page-footer lime accent-2">
+            <div class="container ">
                 <p><a href="#">Back to the top</a></p>
             </div>
-            <div class="footer-copyright">
+            <div class="footer-copyright deep-orange accent-3">
                 <div class="container">
                     @2016 Zambz
                 </div>
@@ -59,7 +61,7 @@
             <div class="blog-post">
                 <h2 class="blog-post-title">{{title}}</h2>
                 <p class="blog-post-meta">At {{format created}} by {{authorEmail}}</p>
-                <div>{{content}}</div>
+                <div>{{{content}}}</div>
             </div>
           {{/each}}
       </script>

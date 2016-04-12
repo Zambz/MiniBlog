@@ -27,6 +27,7 @@ $(function () {
         var addBlogTemplate = Handlebars.compile(addBlogScript);
     
         $('.main-container').html(addBlogTemplate);
+        tinymce.init({ selector:'textarea' });
     });
     $(document).on('submit', '.form-add-blog', function(event){
         event.preventDefault();
@@ -35,6 +36,10 @@ $(function () {
             title = data[0].value,
             content = data[1].value;
             
+            if (content === "" || title ===""){
+                Materialize.toast('Cannot leave title or content empty!', 4000);
+            }
+            else{
         var dataStore = Backendless.Persistence.of(Posts);
         
         var postObject = new Posts({
@@ -47,6 +52,7 @@ $(function () {
         
         this.title.value = "";
         this.content.value = "";
+    }
     });
     
     $(document).on('click', '.logout', function(){
@@ -85,5 +91,6 @@ function userLoggedOut(){
 
 function gotError(error) {
     console.log("Error message - " + error.message);
-    console.log("Error code - " + error.code); 
+    console.log("Error code - " + error.code);
+    Materialize.toast('Incorrect!', 4000);
 }
